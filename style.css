@@ -1,0 +1,27 @@
+#questionOne, #questionTwo, #questionThree, #questionFour, #resultBox {
+	visibility: hidden;
+}
+
+body {
+	background-image: url(hexellence.png);
+}
+
+.container {
+	background-color: #fff;
+	border: lightgrey solid 1px;
+	margin: 5em auto;
+	text-align: center;
+	padding-bottom: 5em;
+	width: 75%;
+}
+
+h2 {
+	font-family: 'Abril Fatface', cursive;
+	font-size: 3em;
+	letter-spacing: .15em;
+	text-transform: uppercase; 
+}
+
+h3, p {
+	font-family: 'Lato', sans-serif;
+}
