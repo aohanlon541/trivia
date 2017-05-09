@@ -1,4 +1,8 @@
-#questionOne, #questionTwo, #questionThree, #questionFour, #resultBox {
+* {
+	box-sizing: border-box;
+}
+
+#questionOne, #questionTwo, #questionThree, #questionFour, #resultBox, #time-left {
 	visibility: hidden;
 }
 
@@ -9,10 +13,9 @@ body {
 .container {
 	background-color: #fff;
 	border: lightgrey solid 1px;
-	margin: 5em auto;
+	margin: 2em 10em;
 	text-align: center;
-	padding-bottom: 5em;
-	width: 75%;
+	height: 40em;
 }
 
 h2 {
@@ -22,6 +25,61 @@ h2 {
 	text-transform: uppercase; 
 }
 
-h3, p {
+h3, p, #time-left {
 	font-family: 'Lato', sans-serif;
+
 }
+
+p {
+	padding: .75em;
+	margin: 0 10em;
+	border: lightgrey 1px solid;
+}
+
+p:hover {
+	background-color: #e6e6e6;
+}
+
+.UserAnswerOne, .UserAnswerTwo, .UserAnswerThree, .UserAnswerFour {
+	background-color: black;
+	color: white;
+}
+
+button {
+	border-radius: 4px;
+	font-size: 110%;
+	color: white;
+	background: rgb(66, 184, 221);
+}
+
+#beyonce-right {
+	height: 40em;
+	position: absolute;
+	top: 2em;
+	right: -5em;
+}
+
+#beyonce-left {
+	height: 40em;
+	position: absolute;
+	top: 2em;
+	left: -5em;
+}
+
+
+
+/* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+		#beyonce-left, #beyonce-right {
+			visibility: hidden;
+		}
+    }
+
+    @media only screen and (max-width : 640px) {
+		#beyonce-left, #beyonce-right {
+			height: 30em;
+		}
+    }
+
+
+
