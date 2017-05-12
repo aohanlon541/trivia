@@ -1,5 +1,8 @@
-	
+var questionClasses = [$("#questionOne"), $("#questionTwo"), $("#questionThree"), $("#questionFour") ]
+
 //changing the box when the "next button is clicked"
+
+//use boolen to stop things
 	$(".start").click(function() {
 		$("#startBox").css("visibility", "hidden");
 		$("#questionOne").css("visibility", "visible");
@@ -9,28 +12,36 @@
 
 
 	$(".nextQ1").click(function() {
-		$("#questionOne").remove();
+		$("#questionOne").toggle();
 		$("#questionTwo").css("visibility", "visible");
 		countdown.reset();
 	});
 
 
 	$(".nextQ2").click(function () {
-		$("#questionTwo").remove();
+		$("#questionTwo").toggle();
 		$("#questionThree").css("visibility", "visible");
 		countdown.reset();
 	});
 
 	$(".nextQ3").click(function() {
-		$("#questionThree").remove();
+		$("#questionThree").toggle();
 		$("#questionFour").css("visibility", "visible");
 		countdown.reset();
 	});
 
 	$(".submit").click(function() {
-		$("#questionFour").remove();
-		$("#resultBox").css("visibility", "visible");
+		$("#questionFour").toggle();
+
+		for (i = 0; i < questionClasses.length; i++) {
+		questionClasses[i].toggle();
+		}
+
+		$("button").remove();
+		$("p").css({"border": "none", "padding": "0"});
+
 		$("#time-left").css("visibility", "hidden");
+		countdown.reset();
 		countdown.stop();
 	});
 
@@ -50,6 +61,12 @@
 	$(".answerFour").click(function() {
 	$(this).attr("class", "UserAnswerFour");
 	});
+
+	var correctAnswerOne = document.getElementById('correctAnswerOne').className.split(/\s+/);
+
+	if (correctAnswerOne.indexOf('UserAnswerOne') > -1) {
+		$("#correctAnswerOne").css("color", "green");
+	}
 
 
 //timer stuff
@@ -112,3 +129,4 @@ var countdown = {
 	    return minutes + ":" + seconds;
 	  }
 };
+

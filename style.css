@@ -15,7 +15,7 @@ body {
 	border: lightgrey solid 1px;
 	margin: 2em 10em;
 	text-align: center;
-	height: 40em;
+	padding-bottom: 8em;
 }
 
 h2 {
@@ -67,19 +67,12 @@ button {
 }
 
 
-
-/* Extra Small Devices, Phones */ 
-    @media only screen and (max-width : 480px) {
-		#beyonce-left, #beyonce-right {
+@media only screen and (max-width : 960px) {
+	#beyonce-left, #beyonce-right {
 			visibility: hidden;
 		}
     }
 
-    @media only screen and (max-width : 640px) {
-		#beyonce-left, #beyonce-right {
-			height: 30em;
-		}
-    }
 
 
 
