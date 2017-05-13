@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 }
 
-#questionOne, #questionTwo, #questionThree, #questionFour, #resultBox, #time-left {
+#questionOne, #questionTwo, #questionThree, #questionFour, #time-left {
 	visibility: hidden;
 }
 
@@ -36,9 +36,6 @@ p {
 	border: lightgrey 1px solid;
 }
 
-p:hover {
-	background-color: #e6e6e6;
-}
 
 .UserAnswerOne, .UserAnswerTwo, .UserAnswerThree, .UserAnswerFour {
 	background-color: black;
@@ -54,14 +51,14 @@ button {
 
 #beyonce-right {
 	height: 40em;
-	position: absolute;
+	position: fixed;
 	top: 2em;
 	right: -5em;
 }
 
 #beyonce-left {
 	height: 40em;
-	position: absolute;
+	position: fixed;
 	top: 2em;
 	left: -5em;
 }
