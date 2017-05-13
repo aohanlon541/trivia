@@ -85,7 +85,7 @@ var clickFour = 0;
 		$(".UserAnswerThree").css({"background-color": "white", "color": "black"});
 		$(".UserAnswerFour").css({"background-color": "white", "color": "black"});
 
-		$("button").empty();
+		$("button").remove();
 		$("p").css({"border": "none", "padding": "0"});
 
 		$("#time-left").css("visibility", "hidden");
